@@ -44,7 +44,7 @@ function populateNavBar() {
         var exist = GM_getValue(channels[channelName]);
 
         if (typeof exist == "string") {
-            html = "<li name=" + channels[channelName] + "><a class=\"index-link\" href=\"/basliklar/channel?channelname=" + channels[channelName].replace("#", "") + "\">" + channels[channelName] + "</a></li>";
+            html = "<li name=" + channels[channelName] + "><a class=\"index-link\" href=\"/basliklar/kanal/" + channels[channelName].replace("#", "") + "\">" + channels[channelName] + "</a></li>";
             var item = $("[name=" + channels[channelName] + "]").length;
             if (item == 0){
                 $("#quick-index-nav").append(html);
